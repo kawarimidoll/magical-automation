@@ -16,11 +16,20 @@ docker compose up -d --build
 docker compose exec python3 bash
 ```
 
-### install libraries
+### install scrapy
 
 ```sh
 # in python3 container
 python -m pip install scrapy
 # confirm scrapy installed
 scrapy version
+```
+
+### create scrapy project
+
+```sh
+scrapy startproject amazon
+cd amazon
+scrapy genspider amazon_spider amazon.co.jp
+# created amazon/spiders/amazon_spider.py
 ```
