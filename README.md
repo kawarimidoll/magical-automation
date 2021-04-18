@@ -37,3 +37,20 @@ cd amazon
 scrapy genspider amazon_spider amazon.co.jp
 # created amazon/spiders/amazon_spider.py
 ```
+
+## first selenium project
+
+### install libraries
+
+```sh
+# in python3 container
+python -m pip install selenium
+python -m pip install chromedriver
+```
+
+### create selenium project
+
+```sh
+mkdir selenium_amazon
+cd selenium_amazon
+```
