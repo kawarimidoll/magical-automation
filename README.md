@@ -2,20 +2,24 @@
 
 [ITエンジニアがときめく自動化の魔法 〜仕事を効率化したくなる自動化テクニック〜 Amazon](https://www.amazon.co.jp/dp/4802612486)
 
-# python project
+## python project
 
 ref: [dockerで簡易にpython3の環境を作ってみる - Qiita](https://qiita.com/reflet/items/4b3f91661a54ec70a7dc)
 
 ### build and run
 ```sh
-docker compose up -d --build
+docker compose up -d
+# needs `--build` when first run
+# docker compose up -d --build
 ```
 
 ### connect to the container
+confirm the container is running
 ```sh
 docker compose exec python3 bash
 ```
 
+## first scrapy project
 ### install scrapy
 
 ```sh
