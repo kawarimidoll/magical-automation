@@ -54,3 +54,19 @@ python -m pip install chromedriver
 mkdir selenium_amazon
 cd selenium_amazon
 ```
+
+## scrapy crawler
+create project
+
+```sh
+scrapy startproject socym
+cd socym
+scrapy genspider socym_spider socym.co.jp
+# created socym/spiders/socym_spider.py
+```
+
+run
+
+```sh
+scrapy crawl socym_spider
+```
