@@ -70,3 +70,13 @@ run
 ```sh
 scrapy crawl socym_spider
 ```
+
+## temperature open data
+
+```sh
+mkdir temperatures
+cd temperatures
+curl https://www.data.jma.go.jp/obd/stats/data/mdrr/tem_rct/alltable/mxtemsadext00_rct.csv > max.csv
+vi max_temp.py # create script
+python max_temp.py
+```

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset-"UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>max temps</title>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current',{'packages':['geochart']});
+    google.charts.setOnLoadCallback(drawMap);
+    function drawMap(){
+      let data = [
+        ["都道府","最高気温"], ["北海道", 6.7], ["青森", 6.8], ["秋田", 8.7],
+        ["岩手", 8.1], ["宮城", 8.9], ["山形", 9.0], ["福島", 9.2],
+        ["茨城", 11.3], ["栃木", 10.9], ["群馬", 10.8], ["埼玉", 11.3],
+        ["東京", 19.1], ["千葉", 14.4], ["神奈川", 13.3], ["長野", 8.8],
+        ["山梨", 13.6], ["静岡", 17.2], ["愛知", 12.3], ["岐阜", 11.5],
+        ["三重", 14.4], ["新潟", 9.9], ["富山", 10.4], ["石川", 10.1],
+        ["福井", 11.3], ["滋賀", 10.7], ["京都", 12.0], ["大阪", 12.1],
+        ["兵庫", 12.4], ["奈良", 9.8], ["和歌山", 14.1], ["岡山", 11.0],
+        ["広島", 12.7], ["島根", 12.6], ["鳥取", 12.4], ["徳島", 12.9],
+        ["香川", 11.4], ["愛媛", 15.4], ["高知", 17.4], ["山口", 13.3],
+        ["福岡", 14.1], ["大分", 15.8], ["長崎", 15.0], ["佐賀", 13.8],
+        ["熊本", 16.5], ["宮崎", 18.4], ["鹿児島", 21.8], ["沖縄", 22.9],
+      ];
+      let dt=google.visualization.arrayToDataTable(data);
+      let options = {
+        region: 'JP', // 地域の設定
+        resolugion: 'privinces', // 都道府県単位
+        colors: ['aqua','red'] // 色の設定
+      };
+      // 出力する要素を指定
+      let chart = new google.visualization.GeoChart(
+        document.getElementById('area')
+      );
+      chart.draw(dt, options);
+      // 本にはないけどAPIキーの登録が必要っぽい？
+    }
+  </script>
+</head>
+<body>
+  <div id="area"></div>
+</body>
+</html>
